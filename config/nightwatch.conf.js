@@ -3,7 +3,7 @@ var chromedriver = require('chromedriver')
 var phantomjs = require('phantomjs-prebuilt')
 // Get the launchUrl from the argv,
 // otherwise default to localhost:3000
-// var url = 'http://localhost:3000/long-term-flood-risk'
+var url = 'http://localhost:3000/long-term-flood-risk'
 var urlIdx = process.argv.indexOf('--url')
 
 if (urlIdx > 1) {
