@@ -5,6 +5,7 @@ var riskTests = require('../../common/risk')
 var riskDetailTests = require('../../common/risk-detail')
 
 module.exports = {
+  '@tags': ['happy'],
   'happy-path': function (client) {
     // Loop over each test case
     data.forEach(function (item) {
