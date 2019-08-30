@@ -2,7 +2,7 @@ var mapTests = require('../../common/map')
 var data = require('./data.js')
 module.exports = {
   '@tags': ['map'],
-  'beforeEach': function (client) {
+  beforeEach: function (client) {
     // Force browser to pretendo-mobile
     // client.resizeWindow(300, 600)
   },

@@ -3,13 +3,13 @@ module.exports = {
     return this.api.launchUrl + '/address'
   },
   elements: {
-    'main': '#address-page',
-    'form': '#address-page form',
-    'h1': '.govuk-heading-xl',
-    'addressSelect': '#address',
-    'defaultOption': '#address option:nth-child(1)',
-    'submitBtn': '#address-page form button[type=submit]',
-    'errorMessage': '#address-page #address-error'
+    main: '#address-page',
+    form: '#address-page form',
+    h1: '.govuk-heading-xl',
+    addressSelect: '#address',
+    defaultOption: '#address option:nth-child(1)',
+    submitBtn: '#address-page form button[type=submit]',
+    errorMessage: '#address-page #address-error'
   },
   commands: [{
     loadPageWithPostcode: function (addressId) {

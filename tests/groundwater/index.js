@@ -4,7 +4,7 @@ var addressTests = require('../../common/address')
 var riskTests = require('../../common/risk')
 
 module.exports = {
-  'groundwater': function (client) {
+  groundwater: function (client) {
     // Loop over each postcode
     data.forEach(function (item) {
       var address = item.address

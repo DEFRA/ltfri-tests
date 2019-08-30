@@ -3,12 +3,12 @@ module.exports = {
     return this.api.launchUrl + '/postcode'
   },
   elements: {
-    'main': '#postcode-page',
-    'form': '#postcode-page form',
-    'h1': '.govuk-heading-xl',
-    'postcodeText': '#postcode',
-    'submitBtn': '#postcode-page form button[type=submit]',
-    'errorMessage': '#postcode-page #postcode-error'
+    main: '#postcode-page',
+    form: '#postcode-page form',
+    h1: '.govuk-heading-xl',
+    postcodeText: '#postcode',
+    submitBtn: '#postcode-page form button[type=submit]',
+    errorMessage: '#postcode-page #postcode-error'
   },
   commands: [{
     setPostcode: function (value) {

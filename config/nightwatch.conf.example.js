@@ -31,7 +31,7 @@ module.exports = {
     }
   },
   test_settings: {
-    'default': {
+    default: {
       filter: 'tests/happy-path/index.js',
       launch_url: url,
       selenium_host: '127.0.0.1',

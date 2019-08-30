@@ -3,10 +3,10 @@ module.exports = {
     return this.api.launchUrl + '/search'
   },
   elements: {
-    'main': '#search-page',
-    'postcodeDisplay': 'form h4.postcode-display',
-    'addressList': 'form select#address',
-    'submitBtn': 'form button[type=submit]'
+    main: '#search-page',
+    postcodeDisplay: 'form h4.postcode-display',
+    addressList: 'form select#address',
+    submitBtn: 'form button[type=submit]'
   },
   commands: [{
     selectAddress: function (id) {

@@ -3,7 +3,7 @@ module.exports = {
     return this.api.launchUrl + '/england'
   },
   elements: {
-    'main': '#england-only-page',
-    'heading': '.govuk-heading-xl'
+    main: '#england-only-page',
+    heading: '.govuk-heading-xl'
   }
 }

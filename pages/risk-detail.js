@@ -1,14 +1,14 @@
 module.exports = {
   elements: {
-    'main': '#risk-detail-page',
-    'section': '#risk-detail-page .risk',
-    'riverAndSeaPanel': '#river-and-sea-panel',
-    'surfaceWaterPanel': '#surface-water-panel',
-    'reservoirPanel': '#reservoir-panel',
-    'additionalInformation': '#additional-information',
-    'summaryLink': '#risk-page a[data-id="risk-summary"]',
-    'groundwaterPanel': '#groundwater-panel',
-    'groundwaterText': '#groundwater-panel > p:nth-child(2)'
+    main: '#risk-detail-page',
+    section: '#risk-detail-page .risk',
+    riverAndSeaPanel: '#river-and-sea-panel',
+    surfaceWaterPanel: '#surface-water-panel',
+    reservoirPanel: '#reservoir-panel',
+    additionalInformation: '#additional-information',
+    summaryLink: '#risk-page a[data-id="risk-summary"]',
+    groundwaterPanel: '#groundwater-panel',
+    groundwaterText: '#groundwater-panel > p:nth-child(2)'
   },
   commands: [{
     getInfo: function (callback) {
