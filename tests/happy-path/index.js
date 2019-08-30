@@ -29,7 +29,6 @@ module.exports = {
 
       // Select the first address and submit
       addressPage.setAddressAndSubmit(address)
-      // addressPage.submit()
 
       /**
        * Create risk page object
