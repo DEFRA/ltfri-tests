@@ -24,11 +24,11 @@ module.exports = {
 
     mapTests.assertZoomIs(client, mapPage, 0)
 
-    mapPage.enterFullscreen()
+    // mapPage.enterFullscreen()
 
     // mapTests.assertFullscreen(mapPage, true)
 
-    mapPage.exitFullscreen()
+    // mapPage.exitFullscreen()
 
     // mapTests.assertFullscreen(mapPage, false)
 

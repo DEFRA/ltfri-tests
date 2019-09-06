@@ -14,6 +14,23 @@ module.exports = {
       riskPage.assert.equal(info.surfaceWaterRisk, data.surfaceWaterRisk)
       riskPage.assert.equal(info.reservoirRisk, data.reservoirRisk)
 
+      console.log('HERE')
+      const RiskDescriptions = {
+        'Very Low': 'Very low risk - less than 0.1% chance each year',
+        Low: 'Low risk - between 0.1% and 1% chance each year',
+        Medium: 'Medium risk - between 1.1% and 3.3% chance each year',
+        High: 'High risk - greater than 3.3% chance each year'
+      }
+
+      riskPage.assert.containsText('@surfaceWater', RiskDescriptions[info.surfaceWaterRisk])
+      riskPage.assert.containsText('@riversSea', RiskDescriptions[info.riverAndSeaRisk])
+      if (info.reservoirRisk) {
+        riskPage.assert.containsText('@reservoir', 'There is a risk of flooding in this area from reservoirs - it is extremely unlikely')
+      }
+
+      if (info.isGroundwaterArea) {
+        riskPage.assert.containsText('@groundwater', 'High groundwater levels may cause flooding in this area')
+      }
       // TODO: Fix once content stable
       // Check the heading
       // if (info.status === RiskStatus.AtRisk) {
