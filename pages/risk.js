@@ -7,7 +7,7 @@ module.exports = {
     'firstItem': '#risk-page ol.list-number > li:first-child',
     'lastItem': '#risk-page ol.list-number > li:last-child',
     'detailLink': '#risk-page a[data-id="risk-detail"]',
-    'groundwater': 'ol.list > li:nth-child(5) > div:nth-child(1) > p:nth-child(4)'
+    'groundwater': 'ol.list > li:nth-child(5) > div:nth-child(1) > p:nth-child(5)'
   },
   commands: [{
     getInfo: function (callback) {
