@@ -1,6 +1,5 @@
 module.exports = {
   url: function () {
-    console.log('2334534346', this.api.launchUrl)
     return this.api.launchUrl
   },
   elements: {

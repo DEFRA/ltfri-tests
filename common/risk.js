@@ -9,7 +9,6 @@ module.exports = {
   assertOutcome: function (riskPage, data) {
     riskPage.getInfo(function (info) {
       console.log('POSTCODE: ', data.postcode)
-      riskPage.assert.equal(info.status, data.outcome)
       riskPage.assert.equal(info.riverAndSeaRisk, data.riverAndSeaRisk)
       riskPage.assert.equal(info.surfaceWaterRisk, data.surfaceWaterRisk)
       riskPage.assert.equal(info.reservoirRisk, data.reservoirRisk)
@@ -40,15 +39,6 @@ module.exports = {
       if (info.isGroundwaterArea) {
         riskPage.assert.containsText('@groundwater', 'Flooding is possible in the local area when groundwater levels are high')
       }
-    })
-  },
-  assertOutcomeGW: function (riskPage, data) {
-    riskPage.getInfo(function (info) {
-      console.log('POSTCODE: ', data.postcode)
-      riskPage.assert.equal(info.status, data.outcome)
-      riskPage.assert.equal(info.riverAndSeaRisk, data.riverAndSeaRisk)
-      riskPage.assert.equal(info.surfaceWaterRisk, data.surfaceWaterRisk)
-      riskPage.assert.equal(info.reservoirRisk, data.reservoirRisk)
     })
   }
 }

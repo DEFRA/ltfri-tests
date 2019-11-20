@@ -15,7 +15,6 @@ module.exports = {
     getInfo: function (callback) {
       return this.waitForElementVisible('@main', 1000)
         .getAttribute('@main', 'data-test-info', function (result) {
-          console.log('RES', result.value)
           var info = JSON.parse(result.value)
           callback(info)
         })
