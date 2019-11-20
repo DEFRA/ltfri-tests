@@ -1,6 +1,6 @@
 var data = require('./data')
 var postcodeTests = require('../../common/postcode')
-var addressTests = require('../../common/address')
+var searchTests = require('../../common/search')
 
 module.exports = {
   'valid-search': function (client) {
@@ -19,12 +19,12 @@ module.exports = {
       postcodePage.setPostcodeAndSubmit(postcode)
 
       /**
-       * Create address page object
+       * Create search page object
        */
-      var addressPage = client.page.address()
+      var searchPage = client.page.search()
 
       // Assert the correct search page is displayed
-      addressTests.assertPage(addressPage, expectedResultCount)
+      searchTests.assertPage(searchPage, expectedResultCount)
     })
 
     // Close the window

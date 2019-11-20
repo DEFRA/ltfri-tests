@@ -1,6 +1,6 @@
 var data = require('./data')
 var postcodeTests = require('../../common/postcode')
-var addressTests = require('../../common/address')
+var searchTests = require('../../common/search')
 var riskTests = require('../../common/risk')
 
 module.exports = {
@@ -22,14 +22,13 @@ module.exports = {
       /**
        * Create address page object
        */
-      var addressPage = client.page.address()
+      var searchPage = client.page.search()
 
       // // Assert the correct postcode
-      addressTests.assertPage(addressPage)
+      searchTests.assertPage(searchPage)
 
       // Select the first address and submit
-      addressPage.setAddressAndSubmit(address)
-      // addressPage.submit()
+      searchPage.setAddressAndSubmit(address)
 
       /**
        * Create risk page object
@@ -37,19 +36,7 @@ module.exports = {
       var riskPage = client.page.risk()
 
       // Check outcome
-      // TODO assertOutcome from old risk-detail pages (assertOutcomeGW) too
-      riskTests.assertOutcomeGW(riskPage, item)
-
-      // Navigate to detail pages
-      // riskPage.gotoRiskDetail()
-
-      // /**
-      //  * Create risk detail page object
-      //  */
-      // var riskDetailPage = client.page['risk-detail']()
-
-      // // Check outcome
-      // riskDetailTests.assertOutcomeGW(riskDetailPage, item)
+      riskTests.assertOutcome(riskPage, item)
     })
 
     // Close the window

@@ -9,7 +9,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: 'CORNER COTTAGE',
@@ -18,7 +19,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Low,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: 'INVERMAY',
@@ -27,7 +29,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Medium,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: 'PARKVIEW HOUSE',
@@ -36,7 +39,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.High,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: '8',
@@ -45,7 +49,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.High,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: 'KEEDALE',
@@ -54,7 +59,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.Low,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: '12',
@@ -63,7 +69,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.Medium,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: '17',
@@ -72,7 +79,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.High,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   },
   {
     premises: 'PARK VIEW COTTAGE',
@@ -81,7 +89,8 @@ const data = [
     outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.Medium,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   }
   // { premises: '3',
   //   postcode: 'CB8 0HL',

@@ -315,6 +315,18 @@ const data = [
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false
+  },
+
+  // Groundwater risk //
+  {
+    premises: 'BEECH LODGE',
+    postcode: 'DN19 7DJ',
+    address: 100050180645,
+    outcome: RiskStatus.AtRisk,
+    riverAndSeaRisk: RiskLevel.VeryLow,
+    surfaceWaterRisk: RiskLevel.VeryLow,
+    reservoirRisk: false,
+    isGroundwaterArea: true
   }
 
 ]

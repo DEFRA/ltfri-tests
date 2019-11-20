@@ -1,8 +1,8 @@
 module.exports = {
   loadPage: function (postcodePage) {
     postcodePage.navigate()
-      .assert.title('Find an address to check the flood risk - GOV.UK')
-      .assert.containsText('@h1', 'Find an address to check the flood risk')
+      .assert.title('Check the long term flood risk for an area in England - GOV.UK')
+      .assert.containsText('@h1', 'Check the long term flood risk for an area in England')
       // .assert.containsText('@para1', 'Use this service to find out:')
       // .assert.containsText('@list', 'the probability that a location will flood')
       // .assert.containsText('@list', 'the possible causes of flooding')
