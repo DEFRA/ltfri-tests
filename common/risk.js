@@ -8,6 +8,7 @@ module.exports = {
   },
   assertOutcome: function (riskPage, data) {
     riskPage.getInfo(function (info) {
+      console.log('PREMISES: ', data.premises)
       console.log('POSTCODE: ', data.postcode)
       riskPage.assert.equal(info.riverAndSeaRisk, data.riverAndSeaRisk)
       riskPage.assert.equal(info.surfaceWaterRisk, data.surfaceWaterRisk)

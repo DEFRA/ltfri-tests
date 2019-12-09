@@ -41,7 +41,7 @@ const data = [
     premises: '8',
     postcode: 'IP33 1YH',
     address: 100091098209,
-    riverAndSeaRisk: RiskLevel.Low,
+    riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: false,
     isGroundwaterArea: true
@@ -50,7 +50,7 @@ const data = [
     premises: 'KEEDALE',
     postcode: 'DN19 7DJ',
     address: 100050180652,
-    riverAndSeaRisk: RiskLevel.Medium,
+    riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
     isGroundwaterArea: true

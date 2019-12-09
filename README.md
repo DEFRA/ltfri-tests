@@ -6,7 +6,7 @@ Both the selenium jar and the chromedriver are in the /bin directory, so there s
 
 or to target a different url:
 
-`npm run test-e2e-local -- --url https://fr-tst.envage.co.uk/`
+`npm run test-e2e-local -- --url https://flood-dev.aws.defra.cloud/`
 
 ## Remote test (BROWSERSTACK)
 
