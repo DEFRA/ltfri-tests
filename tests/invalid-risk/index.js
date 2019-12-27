@@ -14,7 +14,7 @@ module.exports = {
       var riskPage = client.page.risk()
 
       // Navigate to the risk page with an invalid addressId
-      riskTests.loadPage(riskPage, address)
+      riskTests.loadPage(riskPage, address, false)
 
       // Assert we're on the error page
       errorTests.assertError(riskPage)
