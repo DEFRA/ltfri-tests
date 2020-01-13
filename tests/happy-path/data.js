@@ -319,7 +319,8 @@ const data = [
     address: 100050180645,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
-    reservoirRisk: false
+    reservoirRisk: false,
+    isGroundwaterArea: true
   }
 ]
 
