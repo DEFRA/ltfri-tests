@@ -308,7 +308,6 @@ const data = [
     premises: '10',
     postcode: 'S41 0FH',
     address: 74060107,
-    outcome: RiskStatus.VeryLowRisk,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: true
@@ -318,7 +317,6 @@ const data = [
     premises: 'BEECH LODGE',
     postcode: 'DN19 7DJ',
     address: 100050180645,
-    outcome: RiskStatus.AtRisk,
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false
