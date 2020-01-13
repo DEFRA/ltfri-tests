@@ -1,11 +1,11 @@
 var data = require('./data')
-var postcodeTests = require('../../common/postcode')
 var searchTests = require('../../common/search')
-var riskTests = require('../../common/risk')
+var postcodeTests = require('../../common/postcode')
+var englandOnlyTests = require('../../common/england-only')
 
 module.exports = {
-  'happy-path': function (client) {
-    // Loop over each test case
+  'welsh-postcode': function (client) {
+    // Loop over each postcode
     data.forEach(function (item) {
       var address = item.address
       var postcode = item.postcode
@@ -31,12 +31,12 @@ module.exports = {
       searchPage.setAddressAndSubmit(address)
 
       /**
-       * Create risk page object
+       * Create search page object
        */
-      var riskPage = client.page.risk()
+      var englandOnlyPage = client.page['england-only']()
 
-      // Check outcome
-      riskTests.assertOutcome(riskPage, item)
+      // Assert we get the correct message
+      englandOnlyTests.assertMessage(englandOnlyPage)
     })
 
     // Close the window

@@ -1,8 +1,8 @@
 module.exports = {
   loadPage: function (homePage) {
     homePage.navigate()
-      .assert.title('Long term flood risk assessment for locations in England - GOV.UK')
-      .assert.containsText('@h1', 'Long term flood risk assessment for locations in England')
+      .assert.title('Check the flood risk for an area in England - GOV.UK')
+      .assert.containsText('@h1', 'Check the flood risk for an area in England')
       .assert.containsText('@para1', 'Use this service to find out:')
       .assert.containsText('@list', 'the probability that a location will flood')
       .assert.containsText('@list', 'the possible causes of flooding')

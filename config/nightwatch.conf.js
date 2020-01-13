@@ -31,7 +31,7 @@ module.exports = {
     }
   },
   test_settings: {
-    'default': {
+    default: {
       skiptags: 'map',
       // filter: 'tests/happy-path/index.js',
       launch_url: url,

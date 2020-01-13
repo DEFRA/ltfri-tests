@@ -3,18 +3,34 @@ module.exports = {
     return this.api.launchUrl + '/search'
   },
   elements: {
-    'main': '#search-page',
-    'postcodeDisplay': 'form h4.postcode-display',
-    'addressList': 'form select#address',
-    'submitBtn': 'form button[type=submit]'
+    main: '#address-page',
+    form: '#address-page form',
+    h1: '.govuk-heading-xl',
+    addressSelect: '#address',
+    defaultOption: '#address option:nth-child(1)',
+    submitBtn: '#address-page form button[type=submit]',
+    errorMessage: '#address-page #address-error'
   },
   commands: [{
-    selectAddress: function (id) {
-      return this.click('input[name=uprn][value="' + id + '"]')
+    loadPageWithPostcode: function (postcode) {
+      var url = this.url() + '?postcode=' + postcode
+      return this.api.url(url)
+    },
+    setAddress: function (value) {
+      return this.click('select#address option[value="' + value + '"]')
+    },
+    getErrorMessage: function () {
+      return this.waitForElementVisible('@errorMessage', 1000)
+        .click('@submitBtn')
     },
     submit: function () {
       return this.waitForElementVisible('@submitBtn', 1000)
         .click('@submitBtn')
+    },
+    setAddressAndSubmit: function (address) {
+      return this
+        .setAddress(address)
+        .submit()
     }
   }]
 }

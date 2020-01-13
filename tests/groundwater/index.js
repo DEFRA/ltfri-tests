@@ -1,37 +1,34 @@
 var data = require('./data')
-var homeTests = require('../../common/home')
+var postcodeTests = require('../../common/postcode')
 var searchTests = require('../../common/search')
 var riskTests = require('../../common/risk')
-var riskDetailTests = require('../../common/risk-detail')
 
 module.exports = {
-  'groundwater': function (client) {
+  groundwater: function (client) {
     // Loop over each postcode
     data.forEach(function (item) {
       var address = item.address
-      var premises = item.premises
       var postcode = item.postcode
 
       /**
-       * Create home page object
+       * Create postcode page object
        */
-      var homePage = client.page.home()
+      var postcodePage = client.page.postcode()
 
-      // Navigate to the home page & submit postcode
-      homeTests.loadPage(homePage)
-      homePage.setPremisesAndPostcodeAndSubmit(premises, postcode)
+      // Navigate to the postcode page & submit postcode
+      postcodeTests.loadPage(postcodePage)
+      postcodePage.setPostcodeAndSubmit(postcode)
 
       /**
-       * Create search page object
+       * Create address page object
        */
       var searchPage = client.page.search()
 
-      // Assert the correct postcode
+      // // Assert the correct postcode
       searchTests.assertPage(searchPage)
 
       // Select the first address and submit
-      searchPage.selectAddress(address)
-      searchPage.submit()
+      searchPage.setAddressAndSubmit(address)
 
       /**
        * Create risk page object
@@ -39,18 +36,7 @@ module.exports = {
       var riskPage = client.page.risk()
 
       // Check outcome
-      riskTests.assertOutcomeGW(riskPage, item)
-
-      // Navigate to detail pages
-      riskPage.gotoRiskDetail()
-
-      /**
-       * Create risk detail page object
-       */
-      var riskDetailPage = client.page['risk-detail']()
-
-      // Check outcome
-      riskDetailTests.assertOutcomeGW(riskDetailPage, item)
+      riskTests.assertOutcome(riskPage, item)
     })
 
     // Close the window

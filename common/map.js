@@ -1,13 +1,13 @@
 module.exports = {
   loadPageNoParams: function (mapPage, callback) {
     mapPage.navigate()
-      .assert.title('Long term flood risk map for England - GOV.UK')
+      .assert.title('Learn more about flood risk - GOV.UK')
       .assert.containsText('@heading', 'Learn more about flood risk')
       .waitForElementVisible('#map-page button.ol-zoom-in', 20000)
   },
   loadPageWithParams: function (mapPage, addressId, easting, northing, mapType) {
     mapPage.loadPageWithParams(addressId, easting, northing, mapType)
-      .assert.title('Long term flood risk map for England - GOV.UK')
+      .assert.title('Learn more about this area\'s flood risk - GOV.UK')
       .assert.containsText('#map-page h1', 'Learn more about this area\'s flood risk')
       .waitForElementVisible('#map-page button.ol-zoom-in', 20000)
   },

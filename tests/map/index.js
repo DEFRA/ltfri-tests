@@ -2,7 +2,7 @@ var mapTests = require('../../common/map')
 var data = require('./data.js')
 module.exports = {
   '@tags': ['map'],
-  'beforeEach': function (client) {
+  beforeEach: function (client) {
     // Force browser to pretendo-mobile
     // client.resizeWindow(300, 600)
   },
@@ -24,13 +24,13 @@ module.exports = {
 
     mapTests.assertZoomIs(client, mapPage, 0)
 
-    mapPage.enterFullscreen()
+    // mapPage.enterFullscreen()
 
-    mapTests.assertFullscreen(mapPage, true)
+    // mapTests.assertFullscreen(mapPage, true)
 
-    mapPage.exitFullscreen()
+    // mapPage.exitFullscreen()
 
-    mapTests.assertFullscreen(mapPage, false)
+    // mapTests.assertFullscreen(mapPage, false)
 
     // try some panning
     //
