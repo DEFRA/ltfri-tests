@@ -301,8 +301,28 @@ const data = [
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false,
     isGroundwaterArea: true
-  }
+  },
 
+  // Very low risk - in TA but not GW (LTFRI-62)
+  {
+    premises: '10',
+    postcode: 'S41 0FH',
+    address: 74060107,
+    outcome: RiskStatus.VeryLowRisk,
+    riverAndSeaRisk: RiskLevel.VeryLow,
+    surfaceWaterRisk: RiskLevel.VeryLow,
+    reservoirRisk: true
+  },
+  // Very low risk - in a GW TA (LTFRI-62)
+  {
+    premises: 'BEECH LODGE',
+    postcode: 'DN19 7DJ',
+    address: 100050180645,
+    outcome: RiskStatus.AtRisk,
+    riverAndSeaRisk: RiskLevel.VeryLow,
+    surfaceWaterRisk: RiskLevel.VeryLow,
+    reservoirRisk: false
+  }
 ]
 
 module.exports = data
