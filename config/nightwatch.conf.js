@@ -1,6 +1,6 @@
 var selenium = require('selenium-server-standalone-jar')
 var chromedriver = require('chromedriver')
-var phantomjs = require('phantomjs-prebuilt')
+
 // Get the launchUrl from the argv,
 // otherwise default to localhost:3000
 var url = 'http://localhost:3000/long-term-flood-risk'
@@ -54,14 +54,6 @@ module.exports = {
         browserName: 'chrome',
         javascriptEnabled: true,
         acceptSslCerts: true
-      }
-    },
-    phantomjs: {
-      desiredCapabilities: {
-        browserName: 'phantomjs',
-        javascriptEnabled: true,
-        acceptSslCerts: true,
-        'phantomjs.binary.path': phantomjs.path
       }
     }
   }
