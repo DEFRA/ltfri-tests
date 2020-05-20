@@ -34,7 +34,7 @@ module.exports = {
     default: {
       skiptags: 'map',
       // filter: 'tests/groundwater/index.js',
-      launch_url: url,
+      launch_url: url // ,
       // selenium_host: '127.0.0.1',
       // selenium_port: 4444,
       // silent: true,
