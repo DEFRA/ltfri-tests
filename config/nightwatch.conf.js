@@ -23,7 +23,7 @@ module.exports = {
   selenium: {
     start_process: true,
     server_path: selenium.path,
-    log_path: '',
+    // log_path: '',
     host: '127.0.0.1',
     port: 4444,
     cli_args: {
@@ -33,21 +33,21 @@ module.exports = {
   test_settings: {
     default: {
       skiptags: 'map',
-      // filter: 'tests/happy-path/index.js',
+      // filter: 'tests/groundwater/index.js',
       launch_url: url,
-      selenium_host: '127.0.0.1',
-      selenium_port: 4444,
-      silent: true,
-      disable_colors: false,
-      screenshots: {
-        enabled: false,
-        path: ''
-      },
-      desiredCapabilities: {
-        browserName: 'firefox',
-        javascriptEnabled: true,
-        acceptSslCerts: true
-      }
+      // selenium_host: '127.0.0.1',
+      // selenium_port: 4444,
+      // silent: true,
+      // disable_colors: false,
+      // screenshots: {
+      //   enabled: false,
+      //   path: ''
+      // },
+      // desiredCapabilities: {
+      //   browserName: 'firefox',
+      //   javascriptEnabled: true,
+      //   acceptSslCerts: true
+      // }
     },
     chrome: {
       desiredCapabilities: {
@@ -55,7 +55,8 @@ module.exports = {
         chromeOptions: {
           args: [
             '--headless'
-          ]
+          ],
+          w3c: false
         },
         javascriptEnabled: true,
         acceptSslCerts: true
