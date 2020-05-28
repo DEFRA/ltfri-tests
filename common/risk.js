@@ -33,6 +33,10 @@ module.exports = {
       }
 
       riskPage.assert.containsText('@surfaceWater', RiskTitles[info.surfaceWaterRisk])
+
+      riskPage.openSWDetails()
+      riskPage.openRSDetails()
+
       riskPage.assert.containsText('@surfaceWaterDesc', RiskDescriptions[info.surfaceWaterRisk])
       riskPage.assert.containsText('@riversSea', RiskTitles[info.riverAndSeaRisk])
       riskPage.assert.containsText('@riversSeaDesc', RiskDescriptions[info.riverAndSeaRisk])
