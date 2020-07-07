@@ -21,8 +21,8 @@ module.exports = {
           callback(info)
         })
     },
-    loadPageWithAddress: function (addressId) {
-      var url = this.api.launchUrl + '/risk?address=' + addressId
+    loadPage: function () {
+      var url = this.api.launchUrl + '/risk'
       return this.api.url(url)
     },
     openSWDetails: function () {

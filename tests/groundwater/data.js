@@ -4,7 +4,7 @@ const data = [
   {
     premises: 'BEECH LODGE',
     postcode: 'DN19 7DJ',
-    address: 100050180645,
+    address: '0',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false,
@@ -13,7 +13,7 @@ const data = [
   {
     premises: 'CORNER COTTAGE',
     postcode: 'DN19 7DJ',
-    address: 100050180648,
+    address: '4',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
@@ -22,7 +22,7 @@ const data = [
   {
     premises: 'INVERMAY',
     postcode: 'DN19 7DJ',
-    address: 100050180651,
+    address: '7',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false,
@@ -31,7 +31,7 @@ const data = [
   {
     premises: 'PARKVIEW HOUSE',
     postcode: 'DN19 7DJ',
-    address: 100050180657,
+    address: '15',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: false,
@@ -40,7 +40,7 @@ const data = [
   {
     premises: '8',
     postcode: 'IP33 1YH',
-    address: 100091098209,
+    address: '5',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: false,
@@ -49,7 +49,7 @@ const data = [
   {
     premises: 'KEEDALE',
     postcode: 'DN19 7DJ',
-    address: 100050180652,
+    address: '8',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
@@ -58,7 +58,7 @@ const data = [
   {
     premises: '12',
     postcode: 'DN19 7DT',
-    address: 100050180226,
+    address: '11',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false,
@@ -67,7 +67,7 @@ const data = [
   {
     premises: '17',
     postcode: 'DN19 7DT',
-    address: 100050180230,
+    address: '15',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: false,
@@ -76,7 +76,7 @@ const data = [
   {
     premises: 'PARK VIEW COTTAGE',
     postcode: 'DN19 7DJ',
-    address: 100050180658,
+    address: '14',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false,
