@@ -11,7 +11,7 @@ const data = [
   {
     premises: 2,
     postcode: 'LE2 7QA',
-    address: 2465055337,
+    address: '1',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: true
@@ -21,7 +21,7 @@ const data = [
   {
     premises: 101,
     postcode: 'LE4 5QD',
-    address: 2465065006,
+    address: '25',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false
@@ -31,7 +31,7 @@ const data = [
   {
     premises: 65,
     postcode: 'LE4 7SG',
-    address: 2465089742,
+    address: '32',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false
@@ -45,7 +45,7 @@ const data = [
   {
     premises: 11,
     postcode: 'CV37 6YZ',
-    address: 100070216073,
+    address: '10',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: true
@@ -55,7 +55,7 @@ const data = [
   {
     premises: '20',
     postcode: 'LE3 5FD',
-    address: 2465041934,
+    address: '11',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: true
@@ -67,7 +67,7 @@ const data = [
   {
     premises: 'THE STABLES',
     postcode: 'NN6 8PH',
-    address: 28025584,
+    address: '30',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false
@@ -81,7 +81,7 @@ const data = [
   {
     premises: 7,
     postcode: 'SW18 1TJ',
-    address: 121008673,
+    address: '0',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: false
@@ -97,7 +97,7 @@ const data = [
   {
     premises: 21,
     postcode: 'LE3 5JR',
-    address: 2465038757,
+    address: '14',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false
@@ -105,7 +105,7 @@ const data = [
   {
     premises: 2,
     postcode: 'NN6 6JP',
-    address: 28030078,
+    address: '1',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: true
@@ -113,7 +113,7 @@ const data = [
   {
     premises: 21,
     postcode: 'SW13 0DS',
-    address: 100022295693,
+    address: '10',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: true
@@ -135,7 +135,7 @@ const data = [
   {
     premises: '27A',
     postcode: 'S6 4JP',
-    address: 100052100616,
+    address: '20',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: true
@@ -151,7 +151,7 @@ const data = [
   {
     premises: 42,
     postcode: 'SS8 7EH',
-    address: 100090373928,
+    address: '11',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false
@@ -184,7 +184,7 @@ const data = [
   {
     premises: 83,
     postcode: 'LE3 9RD',
-    address: 2465041144, // Target area https://flood-warning-information.service.gov.uk/target-area/034WAF402 expanded February 2018
+    address: '41', // Target area https://flood-warning-information.service.gov.uk/target-area/034WAF402 expanded February 2018
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: true
@@ -200,7 +200,7 @@ const data = [
   {
     premises: 43,
     postcode: 'LE3 6AH',
-    address: 2465040718,
+    address: '9',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: false
@@ -214,7 +214,7 @@ const data = [
   {
     premises: 73,
     postcode: 'LE3 9RD',
-    address: 2465041139,
+    address: '36',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.High,
     reservoirRisk: true
@@ -226,7 +226,7 @@ const data = [
   {
     premises: 3,
     postcode: 'NN6 6LE',
-    address: 28015435,
+    address: '1',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false
@@ -242,7 +242,7 @@ const data = [
   {
     premises: 2,
     postcode: 'ME10 2PS',
-    address: 100061090397,
+    address: '1',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: false
@@ -260,7 +260,7 @@ const data = [
   {
     premises: 6,
     postcode: 'BS20 6BQ',
-    address: 24063776,
+    address: '4',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false
@@ -268,7 +268,7 @@ const data = [
   {
     premises: 12,
     postcode: 'LE4 9BH',
-    address: 2465119536,
+    address: '11',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: true
@@ -276,7 +276,7 @@ const data = [
   {
     premises: 'Bishops Court',
     postcode: 'DH1 2LY',
-    address: 200003214998,
+    address: '0',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false
@@ -286,7 +286,7 @@ const data = [
   {
     premises: 'Kenyon',
     postcode: 'WA3 7ED',
-    address: 200000977803,
+    address: '1',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false
@@ -296,7 +296,7 @@ const data = [
   {
     premises: 'BEECH LODGE',
     postcode: 'DN19 7DJ',
-    address: 100050180645,
+    address: '0',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false,
@@ -307,7 +307,7 @@ const data = [
   {
     premises: '10',
     postcode: 'S41 0FH',
-    address: 74060107,
+    address: '7',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: true
@@ -316,7 +316,7 @@ const data = [
   {
     premises: 'BEECH LODGE',
     postcode: 'DN19 7DJ',
-    address: 100050180645,
+    address: '0',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
     reservoirRisk: false,
