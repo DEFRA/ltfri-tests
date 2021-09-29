@@ -2,11 +2,11 @@
 ## Local test
 Both the selenium jar and the chromedriver are in the /bin directory, so there shouldn't be any manual setup here, nightwatch handles the selenium server_path
 
-`npm run test-e2e-local` to test `http://localhost:3001`
+`npm run test-e2e-local` to test `http://localhost:3000`
 
 or to target a different url:
 
-`npm run test-e2e-local -- --url https://flood-dev.aws.defra.cloud/`
+`npm run test-e2e-local -- --url https://ltf-dev.aws.defra.cloud/`
 
 ## Remote test (BROWSERSTACK)
 
