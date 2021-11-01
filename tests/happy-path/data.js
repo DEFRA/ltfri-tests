@@ -14,7 +14,7 @@ const data = [
     address: '1',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.High,
-    reservoirRisk: true
+    reservoirRisk: false
   },
   //  { postcode: 'POSTCODE', address: xx77079867,
   //  riverAndSeaRisk: RiskLevel.High, surfaceWaterRisk: RiskLevel.Medium, reservoirRisk: true },
@@ -24,7 +24,7 @@ const data = [
     address: '25',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.Medium,
-    reservoirRisk: false
+    reservoirRisk: true
   },
   //  { postcode: 'POSTCODE', address: XX2465065006,
   // riverAndSeaRisk: RiskLevel.High, surfaceWaterRisk: RiskLevel.Medium, reservoirRisk: true },
@@ -34,7 +34,7 @@ const data = [
     address: '32',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.Low,
-    reservoirRisk: false
+    reservoirRisk: true
   },
   //  { postcode: 'POSTCODE', address: XX,
   //  riverAndSeaRisk: RiskLevel.High, surfaceWaterRisk: RiskLevel.VeryLow, reservoirRisk: true },
@@ -84,7 +84,7 @@ const data = [
     address: '0',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.High,
-    reservoirRisk: false
+    reservoirRisk: true
   },
   // { premises: 70,
   //   postcode: 'W6 0XL',
@@ -100,7 +100,7 @@ const data = [
     address: '14',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Medium,
-    reservoirRisk: false
+    reservoirRisk: true
   },
   {
     premises: 2,
@@ -203,7 +203,7 @@ const data = [
     address: '9',
     riverAndSeaRisk: RiskLevel.High,
     surfaceWaterRisk: RiskLevel.High,
-    reservoirRisk: false
+    reservoirRisk: true
   },
   //  { postcode: 'POSTCODE', address: xx77079867,
   //  riverAndSeaRisk: RiskLevel.Medium, surfaceWaterRisk: RiskLevel.VeryLow, reservoirRisk: true },
@@ -279,7 +279,7 @@ const data = [
     address: '0',
     riverAndSeaRisk: RiskLevel.Low,
     surfaceWaterRisk: RiskLevel.Low,
-    reservoirRisk: false
+    reservoirRisk: true
   },
 
   // Very low risk //
@@ -310,7 +310,7 @@ const data = [
     address: '7',
     riverAndSeaRisk: RiskLevel.VeryLow,
     surfaceWaterRisk: RiskLevel.VeryLow,
-    reservoirRisk: true
+    reservoirRisk: false
   },
   // Very low risk - in a GW TA (LTFRI-62)
   {
