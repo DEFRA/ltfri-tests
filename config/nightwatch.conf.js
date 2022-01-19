@@ -1,10 +1,10 @@
-var selenium = require('selenium-server-standalone-jar')
-var chromedriver = require('chromedriver')
+const selenium = require('selenium-server-standalone-jar')
+const chromedriver = require('chromedriver')
 
 // Get the launchUrl from the argv,
 // otherwise default to localhost:3000
-var url = 'http://localhost:3000'
-var urlIdx = process.argv.indexOf('--url')
+let url = 'http://localhost:3000'
+const urlIdx = process.argv.indexOf('--url')
 
 if (urlIdx > 1) {
   url = process.argv[urlIdx + 1]

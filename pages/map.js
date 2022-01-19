@@ -31,7 +31,7 @@ module.exports = {
   },
   commands: [{
     loadPageWithParams: function (addressId, easting, northing, mapType) {
-      var url = this.api.launchUrl + '/map?address=' + addressId + '&easting=' + easting + '&northing=' + northing + (mapType ? '&map=' + mapType : '')
+      const url = this.api.launchUrl + '/map?address=' + addressId + '&easting=' + easting + '&northing=' + northing + (mapType ? '&map=' + mapType : '')
       return this.api.url(url)
     }
   }, {
@@ -59,7 +59,7 @@ module.exports = {
     }
   }, {
     zoomIn: function (client, n) {
-      var that = this
+      const that = this
       this.waitForElementVisible('@zoomIn', 10000, function () {
         while (n > 0) {
           that.click('@zoomIn')
@@ -70,7 +70,7 @@ module.exports = {
     }
   }, {
     zoomOut: function (client, n) {
-      var that = this
+      const that = this
       this.waitForElementVisible('@zoomOut', 10000, function () {
         while (n > 0) {
           that.click('@zoomOut')
@@ -81,14 +81,14 @@ module.exports = {
     }
   }, {
     enterFullscreen: function () {
-      var that = this
+      const that = this
       this.waitForElementVisible('@enterFullscreen', 10000, function () {
         that.click('@enterFullscreen')
       })
     }
   }, {
     exitFullscreen: function () {
-      var that = this
+      const that = this
       this.waitForElementVisible('@exitFullscreen', 10000, function () {
         that.click('@exitFullscreen')
       })

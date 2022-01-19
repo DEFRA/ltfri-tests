@@ -1,5 +1,5 @@
-var mapTests = require('../../common/map')
-var data = require('./data.js')
+const mapTests = require('../../common/map')
+const data = require('./data.js')
 module.exports = {
   '@tags': ['map'],
   beforeEach: function (client) {
@@ -7,7 +7,7 @@ module.exports = {
     // client.resizeWindow(300, 600)
   },
   'native-functionality': function (client) {
-    var mapPage = client.page.map()
+    const mapPage = client.page.map()
 
     // this is independent of mobile
 
@@ -39,7 +39,7 @@ module.exports = {
     client.end()
   },
   'layer-selection-perf-test': function (client) {
-    var mapPage = client.page.map()
+    const mapPage = client.page.map()
 
     data.addresses.forEach(function (item) {
       // load map with a type
@@ -95,7 +95,7 @@ module.exports = {
         }
 
         // Run the tests on zoom 10, 9, 8, 7
-        for (var i = 0; i < 4; i++) {
+        for (let i = 0; i < 4; i++) {
           layerTest()
         }
       })
@@ -105,7 +105,7 @@ module.exports = {
   },
   'parameterised-map-with-type': function (client) {
     data.mapTypes.forEach(function (item) {
-      var mapPage = client.page.map()
+      const mapPage = client.page.map()
 
       // load map with a type
       mapTests.loadPageWithParams(mapPage, data.addresses[0].addressId, data.addresses[0].easting, data.addresses[0].northing, item.ref)

@@ -1,19 +1,19 @@
-var data = require('./data')
-var postcodeTests = require('../../common/postcode')
-var searchTests = require('../../common/search')
-var riskTests = require('../../common/risk')
+const data = require('./data')
+const postcodeTests = require('../../common/postcode')
+const searchTests = require('../../common/search')
+const riskTests = require('../../common/risk')
 
 module.exports = {
   'happy-path': function (client) {
     // Loop over each test case
     data.forEach(function (item) {
-      var address = item.address
-      var postcode = item.postcode
+      const address = item.address
+      const postcode = item.postcode
 
       /**
        * Create postcode page object
        */
-      var postcodePage = client.page.postcode()
+      const postcodePage = client.page.postcode()
 
       // Navigate to the postcode page & submit postcode
       postcodeTests.loadPage(postcodePage)
@@ -22,7 +22,7 @@ module.exports = {
       /**
        * Create search page object
        */
-      var searchPage = client.page.search()
+      const searchPage = client.page.search()
 
       // Assert the correct postcode
       searchTests.assertPage(searchPage)
@@ -33,7 +33,7 @@ module.exports = {
       /**
        * Create risk page object
        */
-      var riskPage = client.page.risk()
+      const riskPage = client.page.risk()
 
       // Check outcome
       riskTests.assertOutcome(riskPage, item)

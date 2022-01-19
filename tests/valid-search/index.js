@@ -1,18 +1,18 @@
-var data = require('./data')
-var postcodeTests = require('../../common/postcode')
-var searchTests = require('../../common/search')
+const data = require('./data')
+const postcodeTests = require('../../common/postcode')
+const searchTests = require('../../common/search')
 
 module.exports = {
   'valid-search': function (client) {
     // Loop over each test case
     data.forEach(function (item) {
-      var postcode = item.postcode
-      var expectedResultCount = item.expectedResultCount
+      const postcode = item.postcode
+      const expectedResultCount = item.expectedResultCount
 
       /**
        * Create postcode page object
        */
-      var postcodePage = client.page.postcode()
+      const postcodePage = client.page.postcode()
 
       // Navigate to the postcode page & submit postcode
       postcodeTests.loadPage(postcodePage)
@@ -21,7 +21,7 @@ module.exports = {
       /**
        * Create search page object
        */
-      var searchPage = client.page.search()
+      const searchPage = client.page.search()
 
       // Assert the correct search page is displayed
       searchTests.assertPage(searchPage, expectedResultCount)

@@ -1,10 +1,10 @@
-var selenium = require('selenium-server-standalone-jar')
-var chromedriver = require('chromedriver')
-var phantomjs = require('phantomjs-prebuilt')
+const selenium = require('selenium-server-standalone-jar')
+const chromedriver = require('chromedriver')
+const phantomjs = require('phantomjs-prebuilt')
 // Get the launchUrl from the argv,
 // otherwise default to localhost:3000
-var url = 'https://flood-tst.envage.co.uk/long-term-flood-risk'
-var urlIdx = process.argv.indexOf('--url')
+let url = 'https://flood-tst.envage.co.uk/long-term-flood-risk'
+const urlIdx = process.argv.indexOf('--url')
 
 if (urlIdx > 1) {
   url = process.argv[urlIdx + 1]

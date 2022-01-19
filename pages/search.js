@@ -13,7 +13,7 @@ module.exports = {
   },
   commands: [{
     loadPageWithPostcode: function (postcode) {
-      var url = this.url() + '?postcode=' + postcode
+      const url = this.url() + '?postcode=' + postcode
       return this.api.url(url)
     },
     setAddress: function (value) {

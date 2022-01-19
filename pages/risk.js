@@ -17,12 +17,12 @@ module.exports = {
     getInfo: function (callback) {
       return this.waitForElementVisible('@main', 1000)
         .getAttribute('@main', 'data-test-info', function (result) {
-          var info = JSON.parse(result.value)
+          const info = JSON.parse(result.value)
           callback(info)
         })
     },
     loadPage: function () {
-      var url = this.api.launchUrl + '/risk'
+      const url = this.api.launchUrl + '/risk'
       return this.api.url(url)
     },
     openSWDetails: function () {

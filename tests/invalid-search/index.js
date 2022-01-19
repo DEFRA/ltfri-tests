@@ -1,11 +1,11 @@
-var searchTests = require('../../common/search')
+const searchTests = require('../../common/search')
 
 module.exports = {
   'no-selection': function (client) {
     /**
      * Create search page object
      */
-    var searchPage = client.page.search()
+    const searchPage = client.page.search()
 
     // Navigate to the search page & submit
     searchPage.loadPageWithPostcode('WA14 1EP')
