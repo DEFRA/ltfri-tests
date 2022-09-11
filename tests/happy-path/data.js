@@ -65,9 +65,9 @@ const data = [
   //  { postcode: 'POSTCODE', address: xx77079867,
   //  riverAndSeaRisk: RiskLevel.Medium, surfaceWaterRisk: RiskLevel.Low, reservoirRisk: true },
   {
-    premises: 'THE STABLES',
+    premises: 'THE STABLES HOUSE',
     postcode: 'NN6 8PH',
-    address: '30',
+    address: '28',
     riverAndSeaRisk: RiskLevel.Medium,
     surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false
