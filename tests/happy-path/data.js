@@ -83,7 +83,7 @@ const data = [
     postcode: 'SW18 1TJ',
     address: '0',
     riverAndSeaRisk: RiskLevel.Low,
-    surfaceWaterRisk: RiskLevel.High,
+    surfaceWaterRisk: RiskLevel.Medium,
     reservoirRisk: true
   },
   // { premises: 70,
@@ -115,7 +115,7 @@ const data = [
     postcode: 'SW13 0DS',
     address: '10',
     riverAndSeaRisk: RiskLevel.Low,
-    surfaceWaterRisk: RiskLevel.Medium,
+    surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: true
   },
   // { premises: 28,
