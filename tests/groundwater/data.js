@@ -24,7 +24,7 @@ const data = [
     postcode: 'DN19 7DJ',
     address: '7',
     riverAndSeaRisk: RiskLevel.VeryLow,
-    surfaceWaterRisk: RiskLevel.Medium,
+    surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
     isGroundwaterArea: true
   },
@@ -60,7 +60,7 @@ const data = [
     postcode: 'DN19 7DT',
     address: '11',
     riverAndSeaRisk: RiskLevel.Medium,
-    surfaceWaterRisk: RiskLevel.Medium,
+    surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
     isGroundwaterArea: true
   },
@@ -69,7 +69,7 @@ const data = [
     postcode: 'DN19 7DT',
     address: '15',
     riverAndSeaRisk: RiskLevel.Medium,
-    surfaceWaterRisk: RiskLevel.High,
+    surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
     isGroundwaterArea: true
   },
@@ -78,7 +78,7 @@ const data = [
     postcode: 'DN19 7DJ',
     address: '14',
     riverAndSeaRisk: RiskLevel.High,
-    surfaceWaterRisk: RiskLevel.Medium,
+    surfaceWaterRisk: RiskLevel.Low,
     reservoirRisk: false,
     isGroundwaterArea: true
   }
