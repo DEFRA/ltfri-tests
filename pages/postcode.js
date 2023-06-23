@@ -1,6 +1,8 @@
+const config = require('../config')
+
 module.exports = {
   url: function () {
-    return this.api.launchUrl + '/postcode'
+    return this.api.launchUrl + '/postcode?captchabypass=' + config.friendlyCaptchaBypass
   },
   elements: {
     main: '#postcode-page',
@@ -11,6 +13,10 @@ module.exports = {
     errorMessage: '#postcode-page #postcode-error'
   },
   commands: [{
+    establishSession: function () {
+      this.navigate()
+      return this.waitForElementVisible('@main', 1000)
+    },
     setPostcode: function (value) {
       return this.setValue('@postcodeText', value)
     },

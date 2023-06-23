@@ -4,3 +4,4 @@ reports
 selenium-debug.log
 selenium-server.log
 .vscode
+config/server.json

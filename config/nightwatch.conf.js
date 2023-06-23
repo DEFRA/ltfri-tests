@@ -32,13 +32,13 @@ module.exports = {
   test_settings: {
     default: {
       skiptags: 'map',
-      // filter: 'tests/groundwater/index.js',
+      // filter: 'tests/invalid-search/index.js',
       launch_url: url,
       silent: true,
       disable_colors: false,
       screenshots: {
-        enabled: false,
-        path: ''
+        enabled: true,
+        path: 'reports/'
       },
       desiredCapabilities: {
         browserName: 'firefox',
