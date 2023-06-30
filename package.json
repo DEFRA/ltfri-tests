@@ -4,7 +4,7 @@
   "description": "End to end automated test project for risk-app",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
+    "lint": "standard common/**/*.js pages/**/*.js tests/**/*.js",
     "test-e2e-local": "bin/test-e2e.js --env chrome -c config/nightwatch.conf.js",
     "test-e2e-remote": "bin/test-e2e.js --env default -c config/browserstack.json",
     "test": "npm run lint && npm run test-e2e-local"
