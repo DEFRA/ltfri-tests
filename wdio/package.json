@@ -1,6 +1,6 @@
 {
     "name": "webdriverio-tests",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "",
     "private": true,
     "keywords": [],
@@ -13,7 +13,7 @@
         "@wdio/mocha-framework": "^8.1.2",
         "@wdio/spec-reporter": "^8.1.2",
         "chai": "^4.3.7",
-        "chromedriver": "^113.0.0",
+        "chromedriver": "^105.0.0",
         "mocha": "^10.2.0",
         "wdio-chromedriver-service": "^8.0.1",
         "wdio-image-comparison-service": "^5.0.2"

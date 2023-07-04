@@ -1,52 +1,41 @@
-class postcode_PO 
-{
+/* global $ */
+const Page = require('./page')
 
-get title()
-{
+class PostcodePO extends Page {
+  get title () {
     return $('h1')
-}                  
+  }
 
-get subHeading()
-{
+  get subHeading () {
     return $("//p[contains(text(),'This service will tell you the flood risk of an ar')]")
+  }
 
-}
-
-get postcodeHeading()
-{
+  get postcodeHeading () {
     return $("//label[normalize-space()='Enter a postcode']")
-}
+  }
 
-get postcodeHint()
-{
-    return $("#postcode-hint")
-}
+  get postcodeHint () {
+    return $('#postcode-hint')
+  }
 
-get postcodeTextbox()
-{
-    return $("#postcode")
-}
+  get postcodeTextbox () {
+    return $('#postcode')
+  }
 
-get postcodeError()
-{
-    return $("#postcode-error")
-}
+  get postcodeError () {
+    return $('#postcode-error')
+  }
 
-get postCodePageContinueCommandButton()
-{
-    return $("#post-code-button")
-    
-}
+  get postCodePageContinueCommandButton () {
+    return $('#post-code-button')
+  }
 
-get viewMapAreasFloodingLink()
-{
+  get viewMapAreasFloodingLink () {
     return $("//a[@href='/map']")
-}
+  }
 
-get royalMailPostcodeFinderLink() 
-{
+  get royalMailPostcodeFinderLink () {
     return $("//a[@href='http://www.royalmail.com/find-a-postcode']")
+  }
 }
-
-}
-module.exports = new postcode_PO()  
+module.exports = new PostcodePO()
