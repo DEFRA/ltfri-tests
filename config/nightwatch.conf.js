@@ -49,6 +49,7 @@ module.exports = {
     chrome: {
       desiredCapabilities: {
         browserName: 'chrome',
+        acceptInsecureCerts: true,
         chromeOptions: {
           args: [
             '--headless'
