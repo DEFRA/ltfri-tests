@@ -37,6 +37,7 @@ describe('Check Your Long Term Flood Risk, Address page', async () => {
   it('Do not select any address', async () => {
     await addressPO.addressContinueButton.click()
     await expect(addressPO.addressError).exist
+    await browser.pause(3000)
     await assert.equal(await addressPO.addressError.getText(), 'Error:\nSelect an address', '')
   })
 })

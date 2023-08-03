@@ -57,14 +57,14 @@ describe('Checking web elements for postcode page', async () => {
     await expect(postcodePO.postcodeTextbox.setValue(''))
     await postcodePO.postCodePageContinueCommandButton.click()
     await expect(postcodePO.postcodeError).exist
-    await assert.equal(await postcodePO.postcodeError.getText(), 'Error: Enter a full postcode in England')
+    await assert.equal(await postcodePO.postcodeError.getText(), 'Error:\nEnter a full postcode in England')
   })
 
   it('Enter an invalid format less than 4 postcode Error', async () => {
     await expect(postcodePO.postcodeTextbox.setValue('WA4'))
     await postcodePO.postCodePageContinueCommandButton.click()
     await expect(postcodePO.postcodeError).exist
-    await assert.equal(await postcodePO.postcodeError.getText(), 'Error: Enter a full postcode in England')
+    await assert.equal(await postcodePO.postcodeError.getText(), 'Error:\nEnter a full postcode in England')
   })
 
   /* Need fix as currently displaying an error */
@@ -72,7 +72,7 @@ describe('Checking web elements for postcode page', async () => {
     await expect(postcodePO.postcodeTextbox.setValue('WA4 1ABZ'))
     await postcodePO.postCodePageContinueCommandButton.click()
     await expect(postcodePO.postcodeError).exist
-    await assert.equal(await postcodePO.postcodeError.getText(), 'Error: Enter a full postcode in England')
+    await assert.equal(await postcodePO.postcodeError.getText(), 'Error:\nEnter a full postcode in England')
     await expect(postcodePO.postcodeTextbox.setValue(''))
   })
 
@@ -80,20 +80,20 @@ describe('Checking web elements for postcode page', async () => {
     await expect(postcodePO.postcodeTextbox.setValue('ZZZ ZZZ'))
     await postcodePO.postCodePageContinueCommandButton.click()
     await expect(postcodePO.postcodeError).exist
-    await assert.equal(await postcodePO.postcodeError.getText(), 'Error: Enter a full postcode in England')
+    await assert.equal(await postcodePO.postcodeError.getText(), 'Error:\nEnter a full postcode in England')
   })
 
   it('Enter special characters postcode Error', async () => {
     await expect(postcodePO.postcodeTextbox.setValue('£$% @~#*'))
     await postcodePO.postCodePageContinueCommandButton.click()
     await expect(postcodePO.postcodeError).exist
-    await assert.equal(await postcodePO.postcodeError.getText(), 'Error: Enter a full postcode in England')
+    await assert.equal(await postcodePO.postcodeError.getText(), 'Error:\nEnter a full postcode in England')
   })
 
   it('Enter only numbers postcode Error', async () => {
     await expect(postcodePO.postcodeTextbox.setValue('0123456789'))
     await postcodePO.postCodePageContinueCommandButton.click()
     await expect(postcodePO.postcodeError).exist
-    await assert.equal(await postcodePO.postcodeError.getText(), 'Error: Enter a full postcode in England')
+    await assert.equal(await postcodePO.postcodeError.getText(), 'Error:\nEnter a full postcode in England')
   })
 })

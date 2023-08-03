@@ -2,11 +2,17 @@
 const Page = require('./page')
 
 class CookieStatement extends Page {
-  get pageContent () { return $('main') }
+  get pgTitle () { return $('.govuk-heading-l') }
+  get pgContent () { return $('main') }
 
-  get cookieStatementContent () {
-    this.pageContent.waitForDisplayed({})
-    return (this.pageContent).getText()
+  get pageTitle () {
+    this.pgTitle.waitForDisplayed({})
+    return (this.pgTitle).getText()
+  }
+
+  get checkcookieContent () {
+    this.pgContent.waitForDisplayed({})
+    return (this.pgContent).getText()
   }
 }
 module.exports = new CookieStatement()
