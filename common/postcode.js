@@ -1,7 +1,7 @@
 module.exports = {
   loadPage: function (postcodePage) {
     postcodePage.navigate()
-      .assert.title('Where do you want to check? - GOV.UK')
+      .assert.title('Where do you want to check? - Check your long term flood risk - GOV.UK')
       .assert.containsText('@h1', 'Where do you want to check?')
       .assert.visible('@postcodeText')
   },

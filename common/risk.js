@@ -6,7 +6,7 @@ module.exports = {
     const result = riskPage.loadPage()
 
     if (assertTitle) {
-      result.assert.title('Your long term flood risk assessment - GOV.UK')
+      result.assert.title('Your long term flood risk assessment - Check your long term flood risk - GOV.UK')
     }
   },
   assertOutcome: function (riskPage, data) {
