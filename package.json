@@ -10,7 +10,7 @@
     "test": "npm run lint && npm run test-e2e-local"
   },
   "devDependencies": {
-    "chromedriver": "^100.0.0",
+    "chromedriver": "^115.0.0",
     "nightwatch": "^1.7.13",
     "selenium-server-standalone-jar": "^3.141.59",
     "standard": "^16.0.4"
