@@ -1,4 +1,4 @@
-/* global describe, it, browser, expect */
+/* global describe, it, browser */
 const { expect, assert } = require('chai')
 
 const cookiebannerPO = require('../page_objects/cookiebanner_PO')
