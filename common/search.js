@@ -1,7 +1,7 @@
 module.exports = {
   loadPage: function (searchPage) {
     searchPage.navigate()
-      .assert.title('Select an address - GOV.UK')
+      .assert.title('Select an address - Check your long term flood risk - GOV.UK')
       .assert.containsText('@h1', 'Select an address')
       .assert.visible('@addressSelect')
   },
