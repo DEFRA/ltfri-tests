@@ -36,15 +36,17 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
   // Check heading
   it('Check the heading of risk display page', async () => {
     await expect(riskdisplayPO.heading).exist
-    const headingText = await riskdisplayPO.heading
-    console.log('heading', await headingText.getText())
+    // TODO: Check this test
+    //  const headingText = await riskdisplayPO.heading
+    // console.log('heading', await headingText.getText())
   })
 
   // Check subheading
   it('Check the subheading of risk display page', async () => {
     await expect(riskdisplayPO.subHeading).exist
-    const subheadingText = await riskdisplayPO.subHeading
-    console.log('subheading', await subheadingText.getText())
+    // TODO: Check this test
+    // const subheadingText = await riskdisplayPO.subHeading
+    // console.log('subheading', await subheadingText.getText())
     await browser.pause(3000)
   })
 
@@ -53,10 +55,9 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
     // Read the no. of risk types
     await expect(riskdisplayPO.risktypes).exist
     const riskcountlength = await riskdisplayPO.risktypes.length
-    console.log('riskcountlength', riskcountlength)
+    // console.log('riskcountlength', riskcountlength)
     // take the count of risk types
     const risktypes = await riskdisplayPO.risktypes
-    console.log('risktypes', risktypes)
 
     // Read the no. of risk level
 
@@ -70,7 +71,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
         if (await risklevel[countrisk].getText() === 'Very low risk') {
           const riversseavlow = await $('.rivers-sea')
           const htmlStructure = await riversseavlow.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -79,14 +80,14 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
             text = text.replace(/\n+/g, '\n') // Remove consecutive new lines
             return text
           }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('All text:', allText)
           const RSInfoVLow = riskInfotext.RSInfoVLow.toString().replace(/\r\n/g, '\n')
           await assert.equal(RSInfoVLow, allText, 'Comparing did not go well')
         // Working on this
         } else if (await risklevel[countrisk].getText() === 'Low risk') {
           const riverssealow = await $('.rivers-sea')
           const htmlStructure = await riverssealow.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -95,7 +96,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
             text = text.replace(/\n+/g, '\n') // Remove consecutive new lines
             return text
           }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('All text:', allText)
           const RSInfoLow = riskInfotext.RSInfoLow.toString().replace(/\r\n/g, '\n')
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(RSInfoLow, allText, 'Comparing did not go well')
@@ -104,7 +105,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
         } else if (await risklevel[countrisk].getText() === 'Medium risk') {
           const riversseamedium = await $('.rivers-sea')
           const htmlStructure = await riversseamedium.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -113,14 +114,14 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
             text = text.replace(/\n+/g, '\n') // Remove consecutive new lines
             return text
           }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('All text:', allText)
           const RSInfoMedium = riskInfotext.RSInfoMedium.toString().replace(/\r\n/g, '\n')
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(RSInfoMedium, allText, 'Comparing did not go well')
         } else if (await risklevel[countrisk].getText() === 'High risk') {
           const riversseahigh = await $('.rivers-sea')
           const htmlStructure = await riversseahigh.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -129,21 +130,21 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
             text = text.replace(/\n+/g, '\n') // Remove consecutive new lines
             return text
           }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('All text:', allText)
           const RSInfoHigh = riskInfotext.RSInfoHigh.toString().replace(/\r\n/g, '\n')
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(RSInfoHigh, allText, 'Comparing did not go well')
         } else {
-          console.log('I couldnt find match any Rivers and Sea risk levels')
+          // console.log('I couldnt find match any Rivers and Sea risk levels')
         }
       } else if (await risktypes[countrisk].getText() === 'Surface water') {
-        console.log('I could find Surface Water Risk')
+        // console.log('I could find Surface Water Risk')
 
         if (await risklevel[countrisk].getText() === 'Very low risk') {
-          console.log('I could find Surface Water Risk Very low risk')
+          // console.log('I could find Surface Water Risk Very low risk')
           const surfacewatervlow = await $('.surface-water')
           const htmlStructure = await surfacewatervlow.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -152,58 +153,60 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
             text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
             return text
           }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('All text:', allText)
           // Reading the value from the file
           // const SWInfoVLow = riskInfotext.SWInfoVLow.toString().replace(/\r\n/g, "\n")
           // Replacing the current Coucil in the text before comparing
           const searchText = 'council'
           const replacementlocator = await $("div[class='surface-water'] p[class='govuk-body'] strong")
           const replacement = await replacementlocator.getText()
-          console.log('Replacement from the locator', replacement)
+          // console.log('Replacement from the locator', replacement)
           const SWInfoVLow = riskInfotext.SWInfoVLow.toString().replace(/\r\n/g, '\n')
           const replacedText = SWInfoVLow.replace(searchText, replacement)
-          console.log('rEPLACED tEXT', replacedText)
+          // console.log('rEPLACED tEXT', replacedText)
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(replacedText, allText, 'Comparing did not go well')
         } else if (await risklevel[countrisk].getText() === 'Low risk') {
-          console.log('I could find Surface Water Risk low risk')
-          const surfacewaterlow = await $('.surface-water')
-          const htmlStructure = await surfacewaterlow.getHTML()
-          console.log('HTML structure:', htmlStructure)
-          const allText = await browser.execute((structure) => {
-            const tempElement = document.createElement('div')
-            tempElement.innerHTML = structure
-            let text = tempElement.innerText.trim()
-            text = text.replace(/\s+/g, ' ')// Replace multiple spaces with a single space
-            text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
-            return text
-          }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('I could find Surface Water Risk low risk')
+          // TODO: Check this test
+          // const surfacewaterlow = await $('.surface-water')
+          // const htmlStructure = await surfacewaterlow.getHTML()
+          // console.log('HTML structure:', htmlStructure)
+          // const allText = await browser.execute((structure) => {
+          //   const tempElement = document.createElement('div')
+          //   tempElement.innerHTML = structure
+          //   let text = tempElement.innerText.trim()
+          //   text = text.replace(/\s+/g, ' ')// Replace multiple spaces with a single space
+          //   text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
+          //   return text
+          // }, htmlStructure)
+          // console.log('All text:', allText)
           // Replacing the current Coucil in the text before comparing
           const searchText = 'council'
           const replacementlocator = await $("div[class='surface-water'] p[class='govuk-body'] strong")
           const replacement = await replacementlocator.getText()
-          console.log('Replacement from the locator', replacement)
+          // console.log('Replacement from the locator', replacement)
           const SWInfoVLow = riskInfotext.SWInfoVLow.toString().replace(/\r\n/g, '\n')
           const replacedText = SWInfoVLow.replace(searchText, replacement)
-          console.log('Replaced Text', replacedText)
+          // console.log('Replaced Text', replacedText)
 
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(SWInfoVLow, replacedText, 'Comparing did not go well')
         } else if (await risklevel[countrisk].getText() === 'Medium risk') {
-          console.log('I could find Surface Water Risk Medium risk')
-          const surfacewatermedium = await $('.surface-water')
-          const htmlStructure = await surfacewatermedium.getHTML()
-          console.log('HTML structure:', htmlStructure)
-          const allText = await browser.execute((structure) => {
-            const tempElement = document.createElement('div')
-            tempElement.innerHTML = structure
-            let text = tempElement.innerText.trim()
-            text = text.replace(/\s+/g, ' ')// Replace multiple spaces with a single space
-            text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
-            return text
-          }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('I could find Surface Water Risk Medium risk')
+          // TODO: Check this test
+          // const surfacewatermedium = await $('.surface-water')
+          // const htmlStructure = await surfacewatermedium.getHTML()
+          // console.log('HTML structure:', htmlStructure)
+          // const allText = await browser.execute((structure) => {
+          //   const tempElement = document.createElement('div')
+          //   tempElement.innerHTML = structure
+          //   let text = tempElement.innerText.trim()
+          //   text = text.replace(/\s+/g, ' ')// Replace multiple spaces with a single space
+          //   text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
+          //   return text
+          // }, htmlStructure)
+          // console.log('All text:', allText)
           // Replacing the file text with the council details
           // console.log('Surface Water Info Medium Risk', SWInfoMedium)
           // console.log('Surface Water Medium Risk', allText)
@@ -211,44 +214,46 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
           const searchText = 'council'
           const replacementlocator = await $("div[class='surface-water'] p[class='govuk-body'] strong")
           const replacement = await replacementlocator.getText()
-          console.log('Replacement from the locator', replacement)
+          // console.log('Replacement from the locator', replacement)
           const SWInfoMedium = riskInfotext.SWInfoMedium.toString().replace(/\r\n/g, '\n')
           const replacedText = SWInfoMedium.replace(new RegExp(searchText, 'g'), searchText, replacement)
-          console.log('Replaced Text', replacedText)
+          // console.log('Replaced Text', replacedText)
 
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(SWInfoMedium, replacedText, 'Comparing did not go well')
         } else if (await risklevel[countrisk].getText() === 'High risk') {
-          console.log('I could find Surface Water Risk High low risk')
-          const surfacewaterhigh = await $('.surface-water')
-          const htmlStructure = await surfacewaterhigh.getHTML()
-          console.log('HTML structure:', htmlStructure)
-          const allText = await browser.execute((structure) => {
-            const tempElement = document.createElement('div')
-            tempElement.innerHTML = structure
-            let text = tempElement.innerText.trim()
-            text = text.replace(/\s+/g, ' ')// Replace multiple spaces with a single space
-            text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
-            return text
-          }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('I could find Surface Water Risk High low risk')
+          // TODO: Check this test
+          // const surfacewaterhigh = await $('.surface-water')
+          // const htmlStructure = await surfacewaterhigh.getHTML()
+          // console.log('HTML structure:', htmlStructure)
+          // const allText = await browser.execute((structure) => {
+          //   const tempElement = document.createElement('div')
+          //   tempElement.innerHTML = structure
+          //   let text = tempElement.innerText.trim()
+          //   text = text.replace(/\s+/g, ' ')// Replace multiple spaces with a single space
+          //   text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
+          //   return text
+          // }, htmlStructure)
+          // console.log('All text:', allText)
 
           // Replacing the current Coucil in the text before comparing
           const searchText = 'council'
           const replacementlocator = await $("div[class='surface-water'] p[class='govuk-body'] strong")
           const replacement = await replacementlocator.getText()
-          console.log('Replacement from the locator', replacement)
+          // console.log('Replacement from the locator', replacement)
           const SWInfoHigh = riskInfotext.SWInfoHigh.toString().replace(/\r\n/g, '\n')
           const replacedText = SWInfoHigh.replace(new RegExp(searchText, 'g'), searchText, replacement)
-          console.log('Replaced Text', replacedText)
+          // console.log('Replaced Text', replacedText)
 
           /// Chai assertion doesnot work shows error \r\n
           await assert.equal(SWInfoHigh, replacedText, 'Comparing did not go well')
         } else {
-          console.log('I couldnt find match any Surface Water risk levels')
+          // console.log('I couldnt find match any Surface Water risk levels')
         }
       } else if (await risktypes[countrisk].getText() === 'Groundwater') {
         // groundwater needs individual title and sub title checks as there is no class defined for it
+        //
         const groundwatertitle = await $('body > div:nth-child(7) > main:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(11) > h3:nth-child(1)')
         assert.equal(await groundwatertitle.getText(), 'Groundwater')
         // const groundwatersubtitle = await $("iv[class='govuk-inset-text very-low'] p[class='govuk-body'] strong")
@@ -259,7 +264,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
         // checking  groundwater description
         const groundwaterinfo = await $('body > div:nth-child(7) > main:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > details:nth-child(12) > div:nth-child(2)')
         const htmlStructure = await groundwaterinfo.getHTML()
-        console.log('HTML structure:', htmlStructure)
+        // console.log('HTML structure:', htmlStructure)
         const allText = await browser.execute((structure) => {
           const tempElement = document.createElement('div')
           tempElement.innerHTML = structure
@@ -268,7 +273,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
           text = text.replace(/\n+/g, '\n')// Remove consecutive new lines
           return text
         }, htmlStructure)
-        console.log('All text:', allText)
+        // console.log('All text:', allText)
         const groundwater = riskInfotext.Groundwater.toString().replace(/\r\n/g, '\n')
         /// Chai assertion doesnot work shows error \r\n
         await assert.equal(groundwater, allText, 'Comparing did not go well')
@@ -285,7 +290,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
           const reservoirsubtitle = await $('.reservoirs .govuk-inset-text p')
           const ressubtitle = await reservoirsubtitle.getText()
           assert.equal(ressubtitle, 'There is a risk of flooding from reservoirs in this area')
-          console.log('Got the risk Reservoir heading')
+          // console.log('Got the risk Reservoir heading')
         } else {
           // Locator for unlikely Reservoir risk
           const reservoirsubtitle = await $$('div.govuk-inset-text.very-low strong')
@@ -298,7 +303,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
               //  const ressubtitle = await reservoirsubtitle.getText()
               break
             } else {
-              console.log('Element locator for unlikely reservoir could not be found')
+              // console.log('Element locator for unlikely reservoir could not be found')
             }
           }
         }
@@ -309,14 +314,14 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
         for (let i = 0; i < reservoirAccordion.length; i++) {
           const element = reservoirAccordion[i]
           const restext = await element.getText()
-          console.log('text', restext)
+          // console.log('text', restext)
           if (restext === 'What a reservoir is and how we check an area’s risk') {
             assert.equal(restext, 'What a reservoir is and how we check an area’s risk')
             await reservoirAccordion[i].click()
-            console.log('Reservoir Accordion title', restext)
+            // console.log('Reservoir Accordion title', restext)
             break
           } else {
-            console.log('Reservoir accordion title cold not be found')
+            // console.log('Reservoir accordion title cold not be found')
           }
         }
 
@@ -327,7 +332,7 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
         for (const element of reservoiraacordiontext) { // eslint-disable-line no-unused-vars
           const reservoiraacordiontextsummary = await $('div.reservoirs details.govuk-details div.govuk-details__text')
           const htmlStructure = await reservoiraacordiontextsummary.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -336,16 +341,16 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
 
           const allTextsummary = allText.replace(/\n+/g, '')
           const allTextsummary1 = allTextsummary.replace(/\s+/g, ' ')
-          console.log('Reservoir summary Text All text:', allTextsummary1)
+          // console.log('Reservoir summary Text All text:', allTextsummary1)
 
           const reservoirSummarytext = riskInfotext.reservoir.toString().replace(/\r\n/g, '\n')
-          console.log('Reservoir summary File Info text:', reservoirSummarytext)
+          // console.log('Reservoir summary File Info text:', reservoirSummarytext)
 
           await assert.equal(reservoirSummarytext, allTextsummary1, 'Comparison didnt go well')
           // The details of reservoir risk is handled in a separate test case
         }
       } else {
-        console.log('Could not find any risk types')
+        // console.log('Could not find any risk types')
       }
     }
   })

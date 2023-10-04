@@ -28,26 +28,29 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
       const addresscombo = await $("//select[@id='address']")
       // Read the address value from the reservoirpostcodes.js
       await addresscombo.selectByIndex(address)
-      const addressvalue = await addresscombo.getValue()
-      console.log('Address Value', addressvalue)
+      // TODO: Check this test
+      // const addressvalue = await addresscombo.getValue()
+      // console.log('Address Value', addressvalue)
       // await browser.pause(3000)
       await expect(addressPO.addressContinueButton.click())
       // Check heading
       await expect(riskdisplayPO.heading).exist
-      const headingText = await riskdisplayPO.heading
-      console.log('heading', await headingText.getText())
+      // TODO: Check this test
+      // const headingText = await riskdisplayPO.heading
+      // console.log('heading', await headingText.getText())
       // Check subheading
       await expect(riskdisplayPO.subHeading).exist
-      const subheadingText = await riskdisplayPO.subHeading
-      console.log('subheading', await subheadingText.getText())
+      // TODO: Check this test
+      // const subheadingText = await riskdisplayPO.subHeading
+      // console.log('subheading', await subheadingText.getText())
       await browser.pause(3000)
       // Read the no. of risk types
       await expect(riskdisplayPO.risktypes).exist
       const riskcountlength = await riskdisplayPO.risktypes.length
-      console.log('riskcountlength', riskcountlength)
+      // console.log('riskcountlength', riskcountlength)
       // take the count of risk types
       const risktypes = await riskdisplayPO.risktypes
-      console.log('risktypes', risktypes)
+      // console.log('risktypes', risktypes)
 
       // Read the no. of risk level on page (SW/ RS/ GW/ Res)
 
@@ -57,11 +60,11 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
       for (let countrisk = 0; countrisk < riskcountlength; countrisk++) {
         // Check for the Reservoir type
         if (await risktypes[countrisk].getText() === 'Reservoirs') {
-          console.log('I could find Reservoir Risk')
+          // console.log('I could find Reservoir Risk')
           // get the content from the web for reservoir (including the list of reservoir affecting the area list)
           const reservoir = await $('.reservoirs')
           const htmlStructure = await reservoir.getHTML()
-          console.log('HTML structure:', htmlStructure)
+          // console.log('HTML structure:', htmlStructure)
           const allText = await browser.execute((structure) => {
             const tempElement = document.createElement('div')
             tempElement.innerHTML = structure
@@ -70,13 +73,12 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
             text = text.replace(/\n+/g, '\n') // Remove consecutive new lines
             return text
           }, htmlStructure)
-          console.log('All text:', allText)
+          // console.log('All text:', allText)
           const reservoirText = reservoirtext
-          console.log('Risk Info text', reservoirText)
+          // console.log('Risk Info text', reservoirText)
 
           // Chai assertion doesnot work shows error \r\n
           await assert.equal(reservoirText, allText, 'Comparing did not go well')
-          browser.close()
         }
       }
     }

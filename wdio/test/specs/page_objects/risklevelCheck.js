@@ -1,6 +1,7 @@
 const Page = require('./page')
-const fs = require('fs')
 
-class risklevelcheck{
-    get risklevel(){}
+class RiskLevelCheck extends Page {
+  get risklevel () {}
 }
+
+module.exports = new RiskLevelCheck()

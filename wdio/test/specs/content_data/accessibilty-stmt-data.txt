@@ -48,9 +48,9 @@ What we’re doing to improve accessibility
 We commit to providing alternative, non-digital access to the service where requests are made to the Environment Agency
 We commit to providing accessible pdfs where requests are made to the Environment Agency
 Preparation of this accessibility statement
-This statement was prepared on 30 March 2022. It was last reviewed on 2 September 2022.
-This website was last tested on 15 July 2022. The audit was carried out internally by the Environment Agency.
-We decided to test the three pages in the service that all users will need to interact with to get a flood risk summary for an area:
+This statement was prepared on 18 September 2023. It was last reviewed on 2 September 2023.
+This website was last tested on 22 June 2023. The test was carried out by the Digital Accessibility Centre (DAC).
+We tested the following 3 pages, which all users need to interact with to get a flood risk summary for an area:
 Where do you want to check
 Select an address
 Flood risk summary

@@ -36,8 +36,8 @@ describe('Check Your Long Term Flood Risk, Address page', async () => {
   /** Checking the error message */
   it('Do not select any address', async () => {
     await addressPO.addressContinueButton.click()
-    await expect(addressPO.addressError).exist
-    await browser.pause(3000)
-    await assert.equal(await addressPO.addressError.getText(), 'Error:\nSelect an address', '')
+    await expect(addressPO.addressError.waitForExist({ timeOut: 30000 })).exist
+    // await browser.pause(3000)
+    await assert.equal(await addressPO.addressError.getText(), 'Error: Select an address', '')
   })
 })

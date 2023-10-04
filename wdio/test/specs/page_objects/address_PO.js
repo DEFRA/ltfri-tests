@@ -39,7 +39,7 @@ class AddressPO extends Page {
   }
 
   get addressContinueButton () {
-    return $('button[type="submit"]')
+    return $('#address-page form button[type=submit]')
   }
 }
 

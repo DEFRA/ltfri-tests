@@ -40,15 +40,17 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
   // Check heading
   it('Check the heading of risk display page', async () => {
     await expect(riskdisplayPO.heading).exist
-    const headingText = await riskdisplayPO.heading
-    console.log('heading', await headingText.getText())
+    // TODO: Check this test
+    // const headingText = await riskdisplayPO.heading
+    // console.log('heading', await headingText.getText())
   })
 
   // Check subheading
   it('Check the subheading of risk display page', async () => {
     await expect(riskdisplayPO.subHeading).exist
-    const subheadingText = await riskdisplayPO.subHeading
-    console.log('subheading', await subheadingText.getText())
+    // TODO: Check this test
+    // const subheadingText = await riskdisplayPO.subHeading
+    // console.log('subheading', await subheadingText.getText())
     await browser.pause(3000)
   })
 
@@ -57,10 +59,11 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
     // Read the no. of risk types
     await expect(riskdisplayPO.risktypes).exist
     const riskcountlength = await riskdisplayPO.risktypes.length
-    console.log('riskcountlength', riskcountlength)
+    // TODO: Check this test
+    // console.log('riskcountlength', riskcountlength)
     // take the count of risk types
     const risktypes = await riskdisplayPO.risktypes
-    console.log('risktypes', risktypes)
+    // console.log('risktypes', risktypes)
 
     // Read the no. of risk level
 
@@ -68,13 +71,13 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
     // const risklevel = await riskdisplayPO.riskLevel
     await riskdisplayPO.riskLevel
     for (let countrisk = 0; countrisk < riskcountlength; countrisk++) {
-      console.log('I am in the loop')
+      // console.log('I am in the loop')
       if (await risktypes[countrisk].getText() === 'Reservoirs') {
-        console.log('I could find Rservoir Risk')
+        // console.log('I could find Rservoir Risk')
 
         const reservoir = await $('.reservoirs')
         const htmlStructure = await reservoir.getHTML()
-        console.log('HTML structure:', htmlStructure)
+        // console.log('HTML structure:', htmlStructure)
         const allText = await browser.execute((structure) => {
           const tempElement = document.createElement('div')
           tempElement.innerHTML = structure
@@ -83,9 +86,9 @@ describe('Check Your Long Term FLood Risk, risk display', async () => {
           text = text.replace(/\n+/g, '\n') // Remove consecutive new lines
           return text
         }, htmlStructure)
-        console.log('All text:', allText)
+        // console.log('All text:', allText)
         const reservoirText = riskInfotext.reservoirrisk.toString().replace(/\r\n/g, '\n')
-        console.log('Risk Info text', reservoirText)
+        // console.log('Risk Info text', reservoirText)
 
         /// Chai assertion doesnot work shows error \r\n
         await assert.equal(reservoirText, allText, 'Comparing did not go well')
