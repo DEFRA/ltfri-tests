@@ -1,135 +1,124 @@
+/* global $ */
 const Page = require('./page')
 const fs = require('fs')
 
-class map_PO{
-    
-    // 
-    get openPage(){
-  
-        return browser.url('')
-        }
-    
-    get title() {
-        return $('h1')
-    }
+class MapPO extends Page {
+  //
+  get title () {
+    return $('h1')
+  }
 
-    get subheading(){
-        return $("//div[@id='map-page']//p[@class='govuk-body-s']")
-    }
+  get subheading () {
+    return $("//div[@id='map-page']//p[@class='govuk-body-s']")
+  }
 
-    get headingFloodRisk(){
-        return $("//label[normalize-space()='Flood risk']")
-    }
+  get headingFloodRisk () {
+    return $("//label[normalize-space()='Flood risk']")
+  }
 
-    get floodRiskCombo(){
-        return $('#map-selector')
-    }
+  get floodRiskCombo () {
+    return $('#map-selector')
+  }
 
-    get headingLocation(){
-        return $("//label[normalize-space()='Location']")
-    }
+  get headingLocation () {
+    return $("//label[normalize-space()='Location']")
+  }
 
-    get locationfield(){
-        return $("//input[@id='location']")
-    }
+  get locationfield () {
+    return $("//input[@id='location']")
+  }
 
-    get canvasmap(){
-        return $("//canvas[@class='ol-unselectable']")
-    }
+  get canvasmap () {
+    return $("//canvas[@class='ol-unselectable']")
+  }
 
-    //surface water link elements(below map)
-    get SWlinkHigh(){
-        return $("//a[contains(text(),'High')]")
-             
-    }
+  // surface water link elements(below map)
+  get SWlinkHigh () {
+    return $("//a[contains(text(),'High')]")
+  }
 
-    get SWlinkMedium(){
-        //return $('[data-id=surface-water-medium]')
-        return $("//a[contains(text(),'Medium')]")
-    }
+  get SWlinkMedium () {
+    // return $('[data-id=surface-water-medium]')
+    return $("//a[contains(text(),'Medium')]")
+  }
 
-    get SWlinkLow(){
-            return $("//a[contains(text(),'Low')]")
-    }
-    
-    get SWlinkVLow(){
-        return $("//a[contains(text(),'Very low')]")
+  get SWlinkLow () {
+    return $("//a[contains(text(),'Low')]")
+  }
 
-    }
-    //Rivers and Sea link elements(below map)
-    get RSlinkHigh(){
-        return $("//a[contains(text(),'High')]")
-             
-    }
+  get SWlinkVLow () {
+    return $("//a[contains(text(),'Very low')]")
+  }
 
-    get RSlinkMedium(){
-        return $("//a[contains(text(),'Medium')]")
-    }
+  // Rivers and Sea link elements(below map)
+  get RSlinkHigh () {
+    return $("//a[contains(text(),'High')]")
+  }
 
-    get RSlinkLow(){
-            return $("//a[contains(text(),'Low')]")
-    }
-    
-    get RSlinkVLow(){
-        return $("//a[contains(text(),'Very low')]")
+  get RSlinkMedium () {
+    return $("//a[contains(text(),'Medium')]")
+  }
 
-    }
-  
-    //Rivers and Sea Risk details
-    get RS_HighRiskText(){
+  get RSlinkLow () {
+    return $("//a[contains(text(),'Low')]")
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_HighRisk.txt', 'utf8')
-        return data
-    }
-    get RS_MediumRiskText(){
+  get RSlinkVLow () {
+    return $("//a[contains(text(),'Very low')]")
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_MediumRisk.txt', 'utf8')
-        return data
-    }
-    get RS_LowRiskText(){
+  // Rivers and Sea Risk details
+  get RsHighRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_HighRisk.txt', 'utf8')
+    return data
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_LowRisk.txt', 'utf8')
-        return data
-    }
-    get RS_VLowRiskText(){
+  get RsMediumRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_MediumRisk.txt', 'utf8')
+    return data
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_VeryLowRisk.txt', 'utf8')
-        return data
-    }
-    //Surface Water Risk details
-    get extentfloodingtitle(){
-        return $("div.govuk-body-s") 
-    }
-    get SW_HighRiskText(){
+  get RsLowRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_LowRisk.txt', 'utf8')
+    return data
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_HighRisk.txt', 'utf8')
-        return data
-    }
-    get SW_MediumRiskText(){
+  get RsVLowRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/RS_VeryLowRisk.txt', 'utf8')
+    return data
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_MediumRisk.txt', 'utf8')
-        return data
-    }
-    get SW_LowRiskText(){
+  // Surface Water Risk details
+  get extentfloodingtitle () {
+    return $('div.govuk-body-s')
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_LowRisk.txt', 'utf8')
-        return data
-    }
-    get SW_VLowRiskText(){
+  get SwHighRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_HighRisk.txt', 'utf8')
+    return data
+  }
 
-        const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_VeryLowRisk.txt', 'utf8')
-        return data
-    }
+  get SwMediumRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_MediumRisk.txt', 'utf8')
+    return data
+  }
 
-    get linkFloodriskInfoforLocationSearch()
-    {
-        return $("//a[contains(text(),'View the flood risk information for the location y')]")
+  get SwLowRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_LowRisk.txt', 'utf8')
+    return data
+  }
 
-    }
+  get SwVLowRiskText () {
+    const data = fs.readFileSync('./test/specs/content_data/content_mapdata/SW_VeryLowRisk.txt', 'utf8')
+    return data
+  }
 
-    get linkFloodriskInfoAnotherLocation()
-    {
-        return $("//a[contains(text(),'View the flood risk information for another locati')]")
-    }
+  get linkFloodriskInfoforLocationSearch () {
+    return $("//a[contains(text(),'View the flood risk information for the location y')]")
+  }
+
+  get linkFloodriskInfoAnotherLocation () {
+    return $("//a[contains(text(),'View the flood risk information for another locati')]")
+  }
 }
-module.exports = new map_PO();
+module.exports = new MapPO()
