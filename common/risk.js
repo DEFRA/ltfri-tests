@@ -26,10 +26,10 @@ module.exports = {
       }
 
       const RiskDescriptions = {
-        'Very Low': 'Very low risk means that this area has a chance of flooding of less than 0.1%',
-        Low: 'Low risk means that this area has a chance of flooding of between 0.1% and 1%',
-        Medium: 'Medium risk means that this area has a chance of flooding of between 1% and 3.3%',
-        High: 'High risk means that this area has a chance of flooding of greater than 3.3%'
+        'Very Low': 'Each year there is less than a 0.1% chance of flooding in a very low risk area.',
+        Low: 'Each year there is between a 0.1% and 1% change of flooding in a low risk area.',
+        Medium: 'Each year there is between a 1% and 3.3% chance of flooding in a medium risk area.',
+        High: 'Each year there is more than a 3.3% chance of flooding in a high risk area.'
       }
 
       riskPage.assert.containsText('@surfaceWater', RiskTitles[info.surfaceWaterRisk])
