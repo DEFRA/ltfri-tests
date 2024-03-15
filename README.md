@@ -1,3 +1,8 @@
+# No longer in use
+
+This repository has been replaced by the cyltfr-acceptance-tests project.
+
+`https://github.com/DEFRA/cyltfr-acceptance-tests`
 
 ## Local test
 Both the selenium jar and the chromedriver are in the /bin directory, so there shouldn't be any manual setup here, nightwatch handles the selenium server_path
